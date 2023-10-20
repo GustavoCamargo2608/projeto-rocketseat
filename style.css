@@ -49,7 +49,8 @@ representa algum elemento, nesse caso uma div. */
     /* Altura do elemento */
     /* height: 712px;
     /* Largura do elemetno */
-    width: 360px;
+    width: 100%;
+    max-width: 588px;
     /* A margem da caixa se AUTO prencherá para todas as direções, centralizando o elemento. */
     margin: 56px auto 0;
     padding: 0 24px;
