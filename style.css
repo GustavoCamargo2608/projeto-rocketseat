@@ -95,6 +95,8 @@ representa algum elemento, nesse caso uma div. */
     left: 0;
     transform: translateY(-50%);
     top: 50%;
+
+    animation: slide-out 0.5s;
 }
 
 #switch span{
@@ -106,11 +108,15 @@ representa algum elemento, nesse caso uma div. */
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 9999px;
+
 }
 
 .light #switch button{
-    right: 0;
-    left: initial;
+    animation: slide-in 0.5s forwards;
+}
+
+#switch button:hover{
+    outline: 8px solid var(--highlight-color);
 }
 
 ul{
@@ -176,5 +182,23 @@ footer{
 
     .light{
         --bg-url: url(./assets/bg-desktop-light.jpg);
+    }
+}
+
+@keyframes slide-in{
+    from{
+        left: 0;
+    }
+    to{
+        left: 50%;
+    }
+}
+
+@keyframes slide-out{
+    from{
+        left: 50%;
+    }
+    to{
+        left: 0;
     }
 }
